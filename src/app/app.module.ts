@@ -13,19 +13,17 @@ import { DetailReviewComponent } from './pages/detail-review/detail-review.compo
 import { DetailNewComponent } from './pages/detail-new/detail-new.component';
 import { NewsListComponent } from './news/news-list/news-list.component';
 import { NewsTheHeroComponent } from './news/news-the-hero/news-the-hero.component';
-import { RelatedNewsComponent } from './news/related-news/related-news.component';
-import { NewsContentComponent } from './news/news-content/news-content.component';
 import { NewsDetailHeroComponent } from './news/news-detail-hero/news-detail-hero.component';
 import { NewsDetailContentComponent } from './news/news-detail-content/news-detail-content.component';
 import { NewsDetailRelatedComponent } from './news/news-detail-related/news-detail-related.component';
-import { HomeReviewsListComponent } from './reviews/home-reviews-list/home-reviews-list.component';
-import { TheHeroReviewsComponent } from './reviews/the-hero-reviews/the-hero-reviews.component';
 import { ReviewsListComponent } from './reviews/reviews-list/reviews-list.component';
 import { ReviewsTheHeroComponent } from './reviews/reviews-the-hero/reviews-the-hero.component';
 import { ReviewsDetailHeroComponent } from './reviews/reviews-detail-hero/reviews-detail-hero.component';
 import { ReviewsDetailContentComponent } from './reviews/reviews-detail-content/reviews-detail-content.component';
 import { ReviewsHomeListComponent } from './reviews/reviews-home-list/reviews-home-list.component';
 import { CatalogCardComponent } from './catalog/catalog-card/catalog-card.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -39,24 +37,23 @@ import { CatalogCardComponent } from './catalog/catalog-card/catalog-card.compon
     DetailNewComponent,
     NewsListComponent,
     NewsTheHeroComponent,
-    RelatedNewsComponent,
-    NewsContentComponent,
     NewsDetailHeroComponent,
     NewsDetailContentComponent,
     NewsDetailRelatedComponent,
-    HomeReviewsListComponent,
-    TheHeroReviewsComponent,
     ReviewsListComponent,
     ReviewsTheHeroComponent,
     ReviewsDetailHeroComponent,
     ReviewsDetailContentComponent,
     ReviewsHomeListComponent,
-    CatalogCardComponent
+    CatalogCardComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
