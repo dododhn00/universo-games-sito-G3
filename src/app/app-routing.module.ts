@@ -15,15 +15,15 @@ const routes: Routes = [
     component: DetailNewComponent,
   },
   {
-    path: '/reviews',
+    path: 'reviews',
     component: ReviewsComponent,
   },
   {
-    path: '/reviews-detail/:id',
+    path: 'reviews-detail/:id',
     component: DetailReviewComponent,
   },
   {
-    path: '/catalog',
+    path: 'catalog',
     component: DetailReviewComponent,
   },
 
