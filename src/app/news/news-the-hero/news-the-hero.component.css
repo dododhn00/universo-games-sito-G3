@@ -1,0 +1,9 @@
+.grid-container {
+    display: grid;
+    gap: 1%;
+    width: 80%;
+}  
+
+.item1{
+    grid-row: 1 / 4;
+}

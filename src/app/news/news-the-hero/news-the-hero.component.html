@@ -1,1 +1,10 @@
-<p>news-the-hero works!</p>
+<div class="grid-container">
+<div *ngFor="let news of heroNews$ | async; let i=index" class="containerBox">
+    <div  [ngStyle]="{'background-image': 'url('+news.imageUrl+')'}" [ngClass]="i == 0? 'item1':'item2'">
+        <div  class="text-box">
+            <p>{{news.category}}</p>
+            <a>{{news.title}}</a>
+        </div>
+    </div>
+</div>
+</div>
