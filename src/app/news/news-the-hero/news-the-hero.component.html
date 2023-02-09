@@ -25,8 +25,8 @@
         [class.bottom-left]="i == 1 || i == 2 || i == 3"
         >
           <p>{{ news.category }}</p>
-          <p>{{ news.title }}</p>
-          <p *ngIf="first"> {{ news.content }}</p>
+          <p line-clamp-2>{{ news.title }}</p>
+          <p *ngIf="first" line-clamp-3> {{ news.content }}</p>
         </div>
         <div class="date"
         [class.date1]="i == 0"

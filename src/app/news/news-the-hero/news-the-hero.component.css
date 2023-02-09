@@ -85,7 +85,9 @@
     left: 2rem;
     right: 2rem;
     background-color: rgba(0, 0, 0, 0.527);
-    padding: 3rem ;
+    padding: 2rem ;
+    text-align: left;
+
   }
 
   .date1 {
@@ -97,6 +99,14 @@
     padding: 5px;
 
 }
+
+  .bottom-left p{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    justify-content: baseline;
+  }
 
   .bottom-left {
     position: absolute;
@@ -120,3 +130,26 @@
 
 }
 
+/* ############### RESPONSIVENESS ################ */
+
+@media screen and (max-width: 1200px) {
+
+  .containerBox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 2rem;
+}
+
+.bottom-left1 {
+  position: absolute;
+  font-size: 0.8rem;
+  bottom: 1rem;
+  left: 1rem;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.527);
+  padding: .5rem;
+  text-align: left;
+}
+}
