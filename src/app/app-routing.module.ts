@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DetailNewComponent } from './pages/detail-new/detail-new.component';
+import { DetailReviewComponent } from './pages/detail-review/detail-review.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ReviewsComponent } from './pages/reviews/reviews.component';
 
 const routes: Routes = [
   {
@@ -22,7 +26,7 @@ const routes: Routes = [
     path: '/catalog',
     component: DetailReviewComponent,
   },
-  
+
 ];
 
 @NgModule({
