@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CatalogComponent } from './pages/catalog/catalog.component';
 import { DetailNewComponent } from './pages/detail-new/detail-new.component';
 import { DetailReviewComponent } from './pages/detail-review/detail-review.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -24,7 +25,7 @@ const routes: Routes = [
   },
   {
     path: 'catalog',
-    component: DetailReviewComponent,
+    component: CatalogComponent,
   },
 
 ];
