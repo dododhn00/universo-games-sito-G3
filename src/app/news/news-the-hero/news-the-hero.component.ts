@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SingleNews } from 'src/app/model/singleNews';
 import { NewsService } from '../service/news.service';
@@ -9,6 +9,7 @@ import { NewsService } from '../service/news.service';
   styleUrls: ['./news-the-hero.component.css']
 })
 export class NewsTheHeroComponent implements OnInit{
+
 
   heroNews$!: Observable<SingleNews[]>
 

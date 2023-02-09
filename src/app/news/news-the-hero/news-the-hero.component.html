@@ -1,10 +1,38 @@
-<div class="grid-container">
+<!-- <div class="grid-container">
 <div *ngFor="let news of heroNews$ | async; let i=index" class="containerBox">
     <div  [ngStyle]="{'background-image': 'url('+news.imageUrl+')'}" [ngClass]="i == 0? 'item1':'item2'">
         <div  class="text-box">
             <p>{{news.category}}</p>
             <a>{{news.title}}</a>
         </div>
+      </div>
     </div>
-</div>
+  </div> -->
+  
+<div class="containerBox">
+  <div
+    *ngFor="let news of heroNews$ | async | slice : 0 : 4; let first = first; let i = index" class="news"
+    [class.news1]="i == 0"
+    [class.news2]="i == 1"
+    [class.news3]="i == 2"
+    [class.news4]="i == 3"
+    [routerLink]="['news-detail', news._id]"
+  >
+    <div class="newscontainer" ng-fi-text>
+      <img [src]="news.imageUrl" [alt]="news.title" />
+        <div
+        [class.bottom-left1]="i == 0"
+        [class.bottom-left]="i == 1 || i == 2 || i == 3"
+        >
+          <p>{{ news.category }}</p>
+          <p line-clamp-2>{{ news.title }}</p>
+          <p *ngIf="first" line-clamp-3> {{ news.content }}</p>
+        </div>
+        <div class="date"
+        [class.date1]="i == 0"
+        >
+            {{ news.publicationDate}}
+      </div>
+    </div>
+  </div>
 </div>

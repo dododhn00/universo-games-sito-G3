@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
   font-family: "Roboto", sans-serif;
@@ -8,12 +8,13 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
+} */
 
-header {
+.header {
   --background: rgba(0, 128, 128, 0.514);
   background-color: var(--background);
   position: fixed;
+  top: 0;
   text-align: center;
   width: 100%;
   z-index: 999;
@@ -35,7 +36,7 @@ h1{
   margin-top: 1rem;
   margin-left: 1rem;
 }
-header a {
+.header a {
   text-decoration: none;
 }
 .logo-div{
@@ -146,7 +147,7 @@ nav a:hover {
         display: none;
     }
 
-    header {
+    .header {
         display: grid;
         grid-template-columns: 1fr auto minmax(600px 1f) 1fr;
         /* grid-template-columns: repeat(7, 1fr);  */
