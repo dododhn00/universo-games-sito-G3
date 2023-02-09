@@ -1,1 +1,26 @@
-<p>header works!</p>
+<header>
+    <!-- <img src="UniversoGamesLogo.png" class="logo"> -->
+    <div class="logo-div">
+        <a routerLink="/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm20NizdnHbsuoKkDuJNGApf32GauViaO6_w&usqp=CAU" class="logo"></a>
+    </div>
+    <input type="checkbox" class="nav-toggle" id="nav-toggle">
+    <nav>
+        <ul>
+            <li>
+                <a routerLink="/reviews">Recensioni</a>
+            </li>
+            <li>
+                <a routerLink="/catalog">Catalogo</a>
+            </li>
+            <li>
+                <div class="search">
+                    <input type="text" placeholder="Search for news">
+                    <button>Search</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+    </label>
+</header>
