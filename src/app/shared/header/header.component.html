@@ -14,8 +14,13 @@
             </li>
             <li>
                 <div class="search">
-                    <input type="text" placeholder="Search for news">
-                    <button>Search</button>
+                    <input type="text" placeholder="Search for news" [(ngModel)]="searchText">
+                    <ul class="list-group list-group-flush">
+                        <!-- results of ngFor is passed to appFilter with argument searchText -->
+                        <li class="list-group-item" *ngFor="let c of data | search: searchText">
+                          <a>{{c.title}}</a>
+                        </li>
+                      </ul>
                 </div>
             </li>
         </ul>
