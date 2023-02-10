@@ -17,11 +17,37 @@ header {
   text-align: center;
   width: 100%;
   z-index: 999;
+  /* border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem; */
+  /* border-radius: 2rem; */
 }
 
 .nav-toggle {
   display: none;
 }
+
+
+/* ######## LOGO ####### */
+h1{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  color: black;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+header a {
+  text-decoration: none;
+}
+.logo-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .logo{
+  border: red solid 1px;
+} */
+
+/* ######################## */
 
 .nav-toggle-label {
   position: absolute;
@@ -69,12 +95,14 @@ nav {
   transform: scale(1, 0);
   transform-origin: top;
   transition: transform 400ms ease-in-out;
+  
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  padding-right: 1rem;
 }
 
 nav li {
