@@ -1,1 +1,38 @@
-<p>catalog-card works!</p>
+<h1>CATALOGO VIDEOGIOCHI</h1>
+<div class="filter-container">
+  <button mat-fab extended color="primary" value="alphabeticalAZ" (click)="orderByAZ()">
+    <mat-icon>favorite</mat-icon>
+    Alfabetico A-Z
+  </button>
+  <button mat-fab extended color="primary" value="alphabeticalZA" (click)="orderByZA()">
+    <mat-icon>favorite</mat-icon>
+    Alfabetico Z-A
+  </button>
+  <button mat-fab extended color="primary" value="releaseDateMinMax" (click)="orderByDateMaxMin()">
+    <mat-icon>favorite</mat-icon>
+    Data rilascio ⬆
+  </button>
+  <button mat-fab extended color="primary" value="releaseDateMaxMin" (click)="orderByDateMinMax()">
+    <mat-icon>favorite</mat-icon>
+    Data rilascio ⬇
+  </button>
+</div>
+<div class="container">
+  <div class="card-container" *ngFor="let videogame of videogames">
+    <div class="image-container">
+      <img [src]="videogame.coverImage">
+      <div class="hide">
+        <p> Genere: {{ videogame.genre }}</p>
+        <p> Autore: {{ videogame.publisher }}</p>
+        <p> Produttore: {{ videogame.softwareHouse }}</p>
+        <p> Players: {{ videogame.numberOfPlayers }}</p>
+      </div>
+    </div>
+    <br><br>
+    <div class="info-container">
+      <p> Titolo: {{ videogame.title }}</p>
+      <p> Categoria: {{ videogame.category }}</p>
+      <p> Data rilascio: {{ videogame.releaseDate }}</p>
+    </div>
+  </div>
+</div>
