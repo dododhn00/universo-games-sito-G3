@@ -1,0 +1,40 @@
+.title{
+    margin-top: 10rem;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.image-container{
+max-width: 500px;
+height: 200px;
+border: 1px solid red;
+margin-right: 1rem;
+}
+
+img{
+max-width: 20rem;
+object-fit: cover;
+}
+
+.singlenews-container{
+    display: flex;
+    border: 1px green solid;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.content{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    justify-content: baseline;
+    word-break: break-all;
+}

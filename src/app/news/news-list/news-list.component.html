@@ -1,6 +1,24 @@
-<div>
+<h1 class="title"> Più notizie per te: </h1>
+ <div class="container">
     <div *ngFor="let news of otherNews">
-        <img [src]="news.imageUrl" [alt]="news.title" />
-        <p>{{ news.title }}</p>
+    <div class="singlenews-container" [routerLink]="['news-detail', news._id]">
+        <div class="image-container">
+            <img [src]="news.imageUrl" [alt]="news.title" class="news-image" />
+        </div>
+        <div>
+            <h2>{{ news.title }}</h2>
+            <p>{{ news.publicationDate }}</p>
+            <p class="content">{{ news.content }}</p>
+            <p>Category: {{ news.category }}</p>
+        </div>
     </div>
 </div>
+<mat-paginator
+[length]="this.otherNews.length"
+[pageSize]="5"
+[pageSizeOptions]="[5, 10, 20]"
+(page)="OnPageChange($event)"
+>
+</mat-paginator> 
+</div>
+

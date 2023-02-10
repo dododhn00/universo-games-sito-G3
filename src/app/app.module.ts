@@ -28,6 +28,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { SearchPipe } from './search.pipe';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +62,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HttpClientModule,
     MatToolbarModule,
     MatIconModule,
+    MatPaginatorModule,
     MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,7 +3,7 @@
 .containerBox {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     justify-content: center;
@@ -11,6 +11,22 @@
     margin-left: 15%;
     margin-right: 15%;
 
+}
+
+.news {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+.news img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+.newscontainer{
+  margin-bottom: -0.5rem;
 }
 
 .news{
