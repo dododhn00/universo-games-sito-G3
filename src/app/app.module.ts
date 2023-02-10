@@ -25,7 +25,8 @@ import { CatalogCardComponent } from './catalog/catalog-card/catalog-card.compon
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { SearchPipe } from './search.pipe';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,8 @@ import { SearchPipe } from './search.pipe';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
