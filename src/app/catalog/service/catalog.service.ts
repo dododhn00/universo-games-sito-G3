@@ -16,7 +16,7 @@ export class CatalogService {
   constructor(private http: HttpClient) {
   }
 
-  getVideoGames() : Observable<Videogame[]> {
+  getVideoGames(): Observable<Videogame[]> {
     return this.http.get<Videogame[]>(this.apiUrl);
   };
 

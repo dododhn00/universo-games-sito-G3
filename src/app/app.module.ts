@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +28,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { SearchPipe } from './search.pipe';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
@@ -62,6 +63,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatToolbarModule,
     MatIconModule,
     MatPaginatorModule,
+    MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,83 @@
+h1 {
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  align-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 3rem;
+}
+
+button {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+h3 {
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  border: 0.25rem solid green;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 15%;
+  margin-right: 15%;
+  gap: 1rem;
+}
+
+.card-container {
+  border: 0.25rem solid red;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.image-container {
+  text-align: center;
+  position: relative;
+}
+
+.image-container > img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+
+}
+
+.hide {
+  display: none;
+  background-color: black;
+  opacity: .8;
+  padding: 1rem;
+  border-radius: 20px;
+  z-index: 2;
+  pointer-events: none;
+  position: absolute;
+  bottom: 5%;
+  margin: 5%;
+  color: white;
+  font-weight: 500;
+  z-index: 1;
+}
+
+
+.card-container:hover .hide {
+  display: block;
+  margin-left: 20%;
+}
+
+.external {
+  margin-top: 10rem;
+}
+
