@@ -47,7 +47,7 @@ import { SearchPipe } from './search.pipe';
     ReviewsDetailContentComponent,
     ReviewsHomeListComponent,
     CatalogCardComponent,
-    SearchPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

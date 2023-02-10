@@ -7,3 +7,4 @@ export interface SingleNews {
   publicationDate: string;
   tags: string[];
 }
+
