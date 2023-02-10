@@ -1,1 +1,6 @@
-<p>reviews-the-hero works!</p>
+<div *ngFor="let reviews of heroReviews">
+    <div>
+        <img [src]="reviews.imageUrls[0]">
+        <p>{{reviews.title}}</p>
+    </div>
+</div>

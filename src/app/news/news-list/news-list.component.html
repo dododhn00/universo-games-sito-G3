@@ -1,1 +1,6 @@
-<p>news-list works!</p>
+<div>
+    <div *ngFor="let news of otherNews">
+        <img [src]="news.imageUrl" [alt]="news.title" />
+        <p>{{ news.title }}</p>
+    </div>
+</div>

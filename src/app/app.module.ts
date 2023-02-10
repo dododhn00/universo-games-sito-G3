@@ -48,7 +48,7 @@ import {MatIconModule} from '@angular/material/icon';
     ReviewsDetailContentComponent,
     ReviewsHomeListComponent,
     CatalogCardComponent,
-    SearchPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
