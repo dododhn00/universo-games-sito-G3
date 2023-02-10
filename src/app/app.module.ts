@@ -27,6 +27,8 @@ import {HttpClientModule} from "@angular/common/http";
 import { SearchPipe } from './search.pipe';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +61,7 @@ import {MatIconModule} from '@angular/material/icon';
     HttpClientModule,
     MatToolbarModule,
     MatIconModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
