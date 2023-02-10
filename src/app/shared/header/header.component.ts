@@ -28,4 +28,10 @@ export class HeaderComponent implements OnInit{
   ngOnInit(): void {
     this.newsService.getNews().subscribe(data => this.data = data);
   }
+
+  // check! : boolean;
+
+  onClickReset(){
+   return this.searchText='';
+  }
 }
