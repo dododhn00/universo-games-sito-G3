@@ -24,6 +24,7 @@ import { ReviewsHomeListComponent } from './reviews/reviews-home-list/reviews-ho
 import { CatalogCardComponent } from './catalog/catalog-card/catalog-card.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import {HttpClientModule} from "@angular/common/http";
     ReviewsDetailContentComponent,
     ReviewsHomeListComponent,
     CatalogCardComponent,
+    SearchPipe,
   ],
   imports: [
     BrowserModule,
