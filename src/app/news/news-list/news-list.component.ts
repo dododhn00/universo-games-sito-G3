@@ -1,21 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import { PageEvent } from '@angular/material/paginator';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { SingleNews } from 'src/app/model/singleNews';
 import { __generator } from 'tslib';
 import { NewsService } from '../service/news.service';
+import { startWith, switchMap } from 'rxjs/operators';
+import { merge, of } from 'rxjs';
+
 
 @Component({
   selector: 'app-news-list',
   templateUrl: './news-list.component.html',
   styleUrls: ['./news-list.component.css']
 })
-export class NewsListComponent implements OnInit{
+export class NewsListComponent implements OnInit {
+
+  @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
 
   news!: SingleNews[];
 
   otherNews: SingleNews[] = [];
 
-  constructor(private newsService: NewsService) {}
+  pageSlice: SingleNews[] = [];
+
+  constructor(private newsService: NewsService) { }
 
   ngOnInit(): void {
     this.newsService.getNews().subscribe(data => {
@@ -23,35 +30,31 @@ export class NewsListComponent implements OnInit{
       this.news = this.news.sort((a, b) => {
         const dt1 = Date.parse(a.publicationDate);
         const dt2 = Date.parse(b.publicationDate);
-        return dt2-dt1
+        return dt2 - dt1
       });
-      for(let i=4; i<this.news.length; i++)
-      {
+      for (let i = 4; i < this.news.length; i++) {
         this.otherNews.push(this.news[i]);
       };
+      this.pageSlice = this.otherNews.slice(0, 5)
     })
 
-  }    
+  }
 
-  pageSlice = this.otherNews.slice(0,5)
 
-  OnPageChange(event: PageEvent){
+  OnPageChange(event: PageEvent) {
     console.log(event);
-     const startIndex = event.pageIndex * event.pageSize;
-     let endIndex = startIndex + event.pageSize;
-     if(endIndex > this.otherNews.length){
+    const startIndex = event.pageIndex * event.pageSize;
+    let endIndex = startIndex + event.pageSize;
+    if (endIndex > this.otherNews.length) {
       endIndex = this.otherNews.length;
-     }
-     this.pageSlice = this.otherNews.slice(startIndex, endIndex);
-
-     console.log(this.otherNews);
-
+    }
+    this.pageSlice = this.otherNews.slice(startIndex, endIndex);
 
   }
 
-  onFetchData(){
-    this.newsService.getNews().subscribe( response => this.otherNews = response);
-  }
+  /*   onFetchData(){
+      this.newsService.getNews().subscribe( response => this.otherNews = response);
+    } */
 
   // this.gameService.getVideogames().subscribe((game) => {
 
@@ -65,5 +68,20 @@ export class NewsListComponent implements OnInit{
   //     this.dataSource.paginator = this.paginator;
   //   })
   // });
+
+
+  /*   linkListToPaginator() {
+      merge(this.paginator.page).pipe(
+        startWith({}),
+        switchMap(() => {
+          return of(this.pageSlice);
+        }))
+        .subscribe(res => {
+          const from = this.paginator.pageIndex * 5;
+          const to = from + 5;
+          this.pageSlice = res.slice(from, to);
+  
+        })
+    } */
 
 }
