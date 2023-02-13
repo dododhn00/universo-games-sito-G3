@@ -1,6 +1,6 @@
 <h1 class="title"> Più notizie per te: </h1>
  <div class="container">
-    <div *ngFor="let news of otherNews">
+    <div *ngFor="let news of pageSlice">
     <div class="singlenews-container" [routerLink]="['news-detail', news._id]">
         <div class="image-container">
             <img [src]="news.imageUrl" [alt]="news.title" class="news-image" />
@@ -18,6 +18,7 @@
 [length]="this.otherNews.length"
 [pageSize]="5"
 [pageSizeOptions]="[5, 10, 20]"
+
 (page)="OnPageChange($event)"
 >
 </mat-paginator> 
