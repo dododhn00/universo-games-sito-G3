@@ -1,1 +1,19 @@
-<p>news-detail-hero works!</p>
+<div
+  class="container"
+  *ngIf="news$ | async as news" 
+>
+  <div class="img-container">
+    <img [src]="news.imageUrl" class="" />
+    
+    <div class="infos-container">
+
+      <p class="title">{{ news.title }}</p>
+      <div class="flex py-4">
+
+        <p class="author">
+          di {{ news.authorName }}
+        </p>
+      </div>
+    </div>
+</div>
+</div>
