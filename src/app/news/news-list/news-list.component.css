@@ -39,3 +39,10 @@ img{
     word-break: break-all;
 }
 
+@media screen and (max-width: 1000px) {
+
+    .singlenews-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}    
