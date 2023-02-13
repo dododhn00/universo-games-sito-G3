@@ -1,1 +1,22 @@
-<p>news-detail-content works!</p>
+<div
+  class="container"
+  *ngIf="news$ | async as news" 
+>
+ 
+    <div class="infos-container">
+
+      <p class="date">{{ news.publicationDate}}</p>
+      <hr class="separator">
+
+      <p class="title">{{ news.content }}</p>
+      
+      <p class="tags">{{ news.tags }}</p>
+      
+      <hr class="separator2">
+      
+      <div class="">
+      
+        <p class="author"> di {{ news.authorName }}  </p>
+      </div>
+    </div>
+</div>

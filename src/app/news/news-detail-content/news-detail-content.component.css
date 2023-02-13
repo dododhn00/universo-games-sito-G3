@@ -1,0 +1,38 @@
+.container {
+  margin-top: 80vh;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.separator {
+  max-width: 10rem;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+
+.separator2{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+p{
+    line-height: 2rem;
+}
+
+.author{
+    font-style: italic;
+}
+
+.tags{
+    border: 1px white solid;
+    background-color: rgba(240, 248, 255);
+    color: black;
+    padding: .7rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: .8rem;
+}
