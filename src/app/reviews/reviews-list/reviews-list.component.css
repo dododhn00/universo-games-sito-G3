@@ -1,0 +1,31 @@
+.container {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.review-card {
+  display: flex;
+  gap: 1rem;
+  border: 0.25rem solid green;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+img{
+  max-width: 20rem;
+  max-height: 20rem;
+  object-fit: cover;
+}
+
+.score-img {
+  position: absolute;
+}
+
+button {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}

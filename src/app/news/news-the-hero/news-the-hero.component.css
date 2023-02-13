@@ -162,10 +162,48 @@
   font-size: 0.8rem;
   bottom: 1rem;
   left: 1rem;
-  top: 1rem;
   right: 1rem;
   background-color: rgba(0, 0, 0, 0.527);
   padding: .5rem;
   text-align: left;
 }
+
+.bottom-left {
+  position: absolute;
+  font-size: 0.8rem;
+  /* top: 10vh;
+  bottom: 10vh;
+  left: 1rem;
+  right: 1rem; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.527);
+  padding: .5rem;
+  text-align: left;
+  height: fit-content;
+  width: 90%;
+}
+
+.news2{
+  height: 30vh;
+}
+
+.news3{
+  height: 30vh;
+}
+
+.news4{
+  height: 30vh;
+}
+
+.news2 img{
+    width: 100%; /* or any custom size */
+    height: 100%; 
+    object-fit: cover;
+}
+
+
+
+
 }
