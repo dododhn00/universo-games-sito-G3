@@ -1,1 +1,7 @@
-<p>Ciao</p>
+<div class="container">
+    <img [src]="reviews[0].imageUrls[0]" [alt]="reviews[0].title" class="review-image" />
+    <p>{{ reviews[0].title }} ({{ reviews[0].publicationDate }})</p>
+    <p>{{ reviews[0].content }}</p>
+    <p>{{ reviews[0].reviewerName }} - {{ reviews[0].score }}⭐</p>
+    <p></p>
+</div>

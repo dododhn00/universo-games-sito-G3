@@ -1,0 +1,14 @@
+.container {
+  text-align: center;
+  border: 0.25rem solid green;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+img{
+  max-width: 40rem;
+  max-height: 40rem;
+  object-fit: cover;
+}
