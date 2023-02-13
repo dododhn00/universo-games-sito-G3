@@ -5,12 +5,16 @@
  
     <div class="infos-container">
 
-      <p class="date">{{ news.publicationDate}}</p>
+      <p class="date">{{ news.publicationDate | date:'fullDate'}}</p>
       <hr class="separator">
 
       <p class="title">{{ news.content }}</p>
-      
-      <p class="tags">{{ news.tags }}</p>
+
+      <div *ngFor="let t of tags" class="tags-container">
+
+        <p class="tags">{{ t }}</p>
+        
+      </div>
       
       <hr class="separator2">
       

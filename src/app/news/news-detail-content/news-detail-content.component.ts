@@ -1,3 +1,4 @@
+import { formatDate } from "@angular/common";
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -18,14 +19,16 @@ export class NewsDetailContentComponent implements OnInit{
   myDate = "26-02-2012";
   myaDate = this.myDate.split("-");
   newDate = new Date( +this.myaDate[2], +this.myaDate[1] -1, +this.myaDate[0]);
+  tags: string[] = []
   
     ngOnInit(): void {
       this.route.params.subscribe((p)=> {
         const id = p['id'];
         this.news$ = this.newsService.getSingleNews(id);
+        this.newsService.getSingleNews(id).subscribe(a => this.tags = [...a.tags])        
       });
 
-      console.log('dataa:', this.newDate.toLocaleDateString());
     }
+
 }
 

@@ -3,8 +3,6 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 import { SingleNews } from 'src/app/model/singleNews';
 import { __generator } from 'tslib';
 import { NewsService } from '../service/news.service';
-import { startWith, switchMap } from 'rxjs/operators';
-import { merge, of } from 'rxjs';
 
 
 @Component({

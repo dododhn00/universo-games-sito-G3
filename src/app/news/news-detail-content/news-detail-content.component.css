@@ -36,4 +36,9 @@ p{
     border-radius: 5px;
     width: fit-content;
     font-size: .8rem;
+    margin: .2rem;
+}
+
+.tags-container{
+  display: inline-block
 }
