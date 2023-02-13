@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Review } from 'src/app/model/review';
 import { ReviewsService } from '../service/reviews.service';
 
@@ -7,26 +7,24 @@ import { ReviewsService } from '../service/reviews.service';
   templateUrl: './reviews-the-hero.component.html',
   styleUrls: ['./reviews-the-hero.component.css']
 })
-export class ReviewsTheHeroComponent implements OnInit{
+export class ReviewsTheHeroComponent {
 
   reviews!: Review[];
 
-  heroReviews: Review[] = [];
-
-  constructor(private reviewService:ReviewsService) {}
+  constructor(
+    private service: ReviewsService
+  ) {}
 
   ngOnInit(): void {
-    this.reviewService.getReviews().subscribe(data => {
-      this.reviews = data;
-      this.reviews = this.reviews.sort((a, b) => {
+
+    this.service.getReviews().subscribe(data => {
+      this.reviews = data.sort((a, b) => {
         const dt1 = Date.parse(a.publicationDate);
         const dt2 = Date.parse(b.publicationDate);
-        return dt2-dt1
-      });
-      for(let i=0; i<3; i++)
-      {
-        this.heroReviews.push(this.reviews[i]);
-      };
+        return dt2 - dt1
+      })
     });
+
   }
+
 }

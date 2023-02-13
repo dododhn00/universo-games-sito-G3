@@ -1,18 +1,7 @@
-<h1 class="title">Le ultime recensioni:</h1>
-
-<div class="reviews-container">
-  <div *ngFor="let reviews of heroReviews; let i = index">
-    <div
-      class="general-div"
-      [class.div1]="i == 0"
-      [class.div2]="i == 1"
-      [class.div3]="i == 2"
-    >
-      <img [src]="reviews.imageUrls[0]" />
-        <figcaption> <p> {{ reviews.title }} </p> </figcaption>
-    </div>
-  </div>
-  <div class="div4" [routerLink]="['reviews']">
-    <h2>Altre recensioni</h2>
-  </div>
+<div class="container">
+    <img [src]="reviews[0].imageUrls[0]" [alt]="reviews[0].title" class="review-image" />
+    <p>{{ reviews[0].title }} ({{ reviews[0].publicationDate }})</p>
+    <p>{{ reviews[0].content }}</p>
+    <p>{{ reviews[0].reviewerName }} - {{ reviews[0].score }}⭐</p>
+    <p></p>
 </div>
