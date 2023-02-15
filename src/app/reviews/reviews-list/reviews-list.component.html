@@ -19,7 +19,7 @@
   </div>
 
   <div class="review-card" *ngFor="let review of reviews" (click)="navigateToDetail(review._id)" >
-      <div class="image-card" >
+      <div class="image-card">
         <img [src]="review.imageUrls[0]" [alt]="review.title" class="review-image" />
         <div class="bottom-left">
                 <div>{{ review.score }}</div>
