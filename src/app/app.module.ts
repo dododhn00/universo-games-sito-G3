@@ -33,6 +33,7 @@ import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
 import { RatingModule } from "ng-starrating";
+import { ReviewsDetailCarouselComponent } from './reviews/reviews-detail-carousel/reviews-detail-carousel.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { RatingModule } from "ng-starrating";
     ReviewsDetailContentComponent,
     ReviewsHomeListComponent,
     CatalogCardComponent,
-    SearchPipe
+    SearchPipe,
+    ReviewsDetailCarouselComponent
   ],
   imports: [
     BrowserModule,
