@@ -1,1 +1,6 @@
-<p>reviews-detail-hero works!</p>
+<div
+  class="container"
+  *ngIf="review$ | async as review"
+>
+  {{ review.title }}
+</div>

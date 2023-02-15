@@ -18,18 +18,18 @@
     </button>
   </div>
 
-  <div class="review-card" *ngFor="let review of reviews">
-    <div class="image-card">
-      <img [src]="review.imageUrls[0]" [alt]="review.title" class="review-image" />
-      <div class="score-img">{{ review.score }}</div>
-    </div>
-    <div class="text-card">
-      <p>
-        Titolo: {{ review.title }} <br>
-        Autore: {{ review.reviewerName }} <br>
-        Pubblicazione: {{ review.publicationDate }} <br>
-        Contenuto: {{ review.content }}
-      </p>
-    </div>
+  <div class="review-card" *ngFor="let review of reviews" [routerLink]="['reviews-detail', review._id]">
+      <div class="image-card">
+        <img [src]="review.imageUrls[0]" [alt]="review.title" class="review-image" />
+        <div class="score-img">{{ review.score }}</div>
+      </div>
+      <div class="text-card">
+        <p>
+          Titolo: {{ review.title }} <br>
+          Autore: {{ review.reviewerName }} <br>
+          Pubblicazione: {{ review.publicationDate }} <br>
+          Contenuto: {{ review.content }}
+        </p>
+      </div>
   </div>
 </div>

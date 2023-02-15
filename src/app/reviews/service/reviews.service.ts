@@ -11,8 +11,7 @@ export class ReviewsService {
   apiUrl = "https://project-works-rest-api.onrender.com/api/v1/GROUP-III/review";
 
 
-  constructor(private http:HttpClient) {
-  }
+  constructor(private http:HttpClient) {}
 
   getReviews(): Observable<Review[]> {
     return this.http.get<Review[]>(this.apiUrl);
