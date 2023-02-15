@@ -3,13 +3,16 @@
   text-align: center;
 }
 
+.filter-container{
+  margin-bottom: 2.7rem;
+}
+
 .review-card {
   display: flex;
   gap: 1rem;
-  padding: 2rem 0rem;
+  padding: 1.5rem 0rem;
   text-align: left;
   margin: 0 auto;
-  margin-top: 1rem;
   width: 70%;
   height:100%;
 }
