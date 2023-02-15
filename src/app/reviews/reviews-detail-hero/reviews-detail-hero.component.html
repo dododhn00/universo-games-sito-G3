@@ -1,1 +1,21 @@
-<p>reviews-detail-hero works!</p>
+<div
+  class="container"
+  *ngIf="review$ | async as review"
+>
+  <div class="img-container">
+    <img [src]="review.imageUrls[0]" class="" />
+
+    <div class="infos-container">
+
+      <p class="title">{{ review.title }}</p>
+      <div class="flex py-4">
+        <p class="score">
+          {{ review.score }}
+        </p>
+        <p class="author">
+          di {{ review.reviewerName }}
+        </p>
+      </div>
+    </div>
+</div>
+</div>

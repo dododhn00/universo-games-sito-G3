@@ -1,0 +1,52 @@
+.container{
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+  height: 60vh;
+}
+
+.img-container{
+  width: 100%;
+  height: 100%;
+}
+
+.img-container img{
+  width: 100%; /* or any custom size */
+  height: 100%;
+  object-fit: cover;
+}
+
+.infos-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.500);
+  padding: 2rem;
+  width: 75%;
+  height: fit-content;
+  border-radius: 1rem;
+  color: white;
+}
+
+.title{
+  font-size: 2rem;
+}
+
+.score {
+  font-size: 3rem;
+}
+
+.author{
+  font-size: 1rem;
+}
+
+p{
+  margin: 1rem;
+  line-height: 2rem;
+}

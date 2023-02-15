@@ -1,1 +1,20 @@
-<p>reviews-detail-content works!</p>
+<div
+  class="container"
+  *ngIf="review$ | async as review"
+>
+
+    <div class="infos-container">
+
+      <p class="date">{{ review.publicationDate | date:'fullDate'}} - Tempo di lettura: {{ time }}</p>
+      <hr class="separator">
+
+      <p class="title">{{ review.content }}</p>
+
+      <hr class="separator2">
+
+      <div class="">
+
+        <p class="author"> di {{ review.reviewerName }}  </p>
+      </div>
+    </div>
+</div>

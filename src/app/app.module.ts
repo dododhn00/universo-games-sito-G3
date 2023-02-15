@@ -69,7 +69,7 @@ import {MatCardModule} from "@angular/material/card";
     MatButtonModule,
     MatChipsModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
 
   ],
   providers: [],

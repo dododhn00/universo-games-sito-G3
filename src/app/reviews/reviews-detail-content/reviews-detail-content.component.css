@@ -1,0 +1,27 @@
+.container {
+  margin-top: 80vh;
+  position: relative;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 10rem;
+}
+
+.separator {
+  max-width: 10rem;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+
+.separator2{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+p{
+    line-height: 2rem;
+}
+
+.author{
+    font-style: italic;
+}
