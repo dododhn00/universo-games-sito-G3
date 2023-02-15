@@ -18,6 +18,7 @@
   text-align: center;
   width: 100%;
   z-index: 999;
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.5);
   /* border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem; */
   /* border-radius: 2rem; */
@@ -43,7 +44,7 @@ h1 {
 .logo-div {
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
 
 }
 /* .logo{
@@ -67,7 +68,7 @@ h1 {
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
   display: block;
-  background: white;
+  background: black;
   height: 2px;
   width: 2em;
   border-radius: 2px;
@@ -122,18 +123,18 @@ nav a {
 }
 
 nav a:hover {
-  color: red;
+  color: rgb(141, 44, 136)(255, 0, 242);
 }
 
 .nav-toggle:checked ~ .header {
-  background-color: rgba(0, 128, 128, 0.914);
+  background-color:white;
 
 }
 
 .nav-toggle:checked ~ nav {
   /* display: block; */
   transform: scale(1, 1);
-  background-color: rgba(0, 128, 128, 0.914);
+  background-color: white;
 }
 
 .nav-toggle:checked ~ nav a {
@@ -257,11 +258,11 @@ nav a:hover {
   /* background-color: #22a7b3a8; */
   background-color: transparent;
   padding-right: 40px;
-  color: #fff;
+  color: black;
   margin-bottom: 1rem;
 }
 .input-search::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.750);
   font-size: 18px;
   letter-spacing: 2px;
   font-weight: 100;
@@ -277,7 +278,7 @@ nav a:hover {
   /* border-radius: 50%; */
   position: absolute;
   right: 0px;
-  color: #ffffff;
+  color: #000000;
   background-color: transparent;
   pointer-events: painted;
   margin-top: 0.8rem;
@@ -286,8 +287,9 @@ nav a:hover {
   width: 300px;
   border-radius: 0px;
   background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.750);
   transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+  margin-bottom: -5px;
 }
 .input-search:focus {
   width: 300px;
