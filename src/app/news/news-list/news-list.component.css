@@ -45,4 +45,7 @@ img{
         display: flex;
         flex-wrap: wrap;
     }
+    h2{
+        margin-top: .5rem;
+    }
 }

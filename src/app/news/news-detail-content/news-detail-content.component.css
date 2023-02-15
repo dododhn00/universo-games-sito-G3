@@ -20,6 +20,7 @@
 
 p{
     line-height: 2rem;
+    white-space: pre-wrap;
 }
 
 .author{

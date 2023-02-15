@@ -48,4 +48,8 @@ export class NewsDetailRelatedComponent implements OnInit {
 
     return intersection.size / unionLenght;
   }
+
+  navigateToDetail(id:string){
+    this.router.navigateByUrl('news-detail/' + id);
+  }
 }

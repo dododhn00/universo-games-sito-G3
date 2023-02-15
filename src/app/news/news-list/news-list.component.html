@@ -5,7 +5,7 @@
 
 <!--      PAGESLICE[0] PERCHE' AL MOMENTO ERA L'UNICO CON L'IMMAGINE, SOSTITUIRE CON news.imageUrl-->
         <div class="image-container">
-            <img [src]="pageSlice[0].imageUrl" [alt]="news.title" class="news-image" />
+            <img [src]="pageSlice[0].imageUrl" onerror="this.src='assets/images/imgcomingsoon.webp';" [alt]="news.title" class="news-image" />
         </div>
         <div>
             <h2>{{ news.title }}</h2>

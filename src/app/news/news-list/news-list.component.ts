@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { Router } from '@angular/router';
 import { SingleNews } from 'src/app/model/singleNews';
 import { __generator } from 'tslib';
 import { NewsService } from '../service/news.service';
