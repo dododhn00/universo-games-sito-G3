@@ -1,6 +1,6 @@
 <div class="header">
   <h1 class="external">CATALOGO VIDEOGIOCHI</h1>
-  <h2>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.</h2>
+  <h2>Esplora il catalogo completo dei giochi da noi recensiti. Buon divertimento!</h2>
 </div>
 <div class="filter-container">
   <button mat-fab extended color="primary" value="alphabeticalAZ" (click)="orderByAZ()">
@@ -31,8 +31,8 @@
         </mat-card-header>
 
         <mat-card-content class="image-container">
-        <img [src]="videogame.coverImage">
-          <h3>Details</h3>
+        <img [src]="videogame.coverImage" onerror="this.src='assets/images/sad.png';">
+          <h3>Dettaglio:</h3>
           <div class="dettagli">
             <p> Genere: {{ videogame.genre }}</p>
             <p> Autore: {{ videogame.publisher }}</p>

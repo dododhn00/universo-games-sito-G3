@@ -3,12 +3,12 @@
   *ngIf="news$ | async as news" 
 >
   <div class="img-container">
-    <img [src]="news.imageUrl" class="" />
+    <img [src]="news.imageUrl" onerror="this.src='assets/images/placeholderDetailHero.jpg';" class="" />
     
     <div class="infos-container">
 
       <p class="title">{{ news.title }}</p>
-      <div class="flex py-4">
+      <div class="">
 
         <p class="author">
           di {{ news.authorName }}

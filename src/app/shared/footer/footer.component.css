@@ -10,9 +10,12 @@
 .footer-content{
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+img{
+  width:30vw;
 }
 
 .footer-content h3{
@@ -59,13 +62,14 @@
 .footer-bottom{
   background: #000;
   width: 100%;
-  padding: 20px;
-  padding-bottom: 40px;
   text-align: center;
+  height: fit-content;
+  padding-top: 1rem;
+  padding-bottom: .4rem;
 }
 
 .footer-bottom p{
-  float: left;
+  text-align: center;
   font-size: 14px;
   word-spacing: 2px;
   text-transform: capitalize;
@@ -103,10 +107,16 @@ display: block;
   color: #27bcda;
 }
 
-@media (max-width:500px) {
-  .footer-menu ul{
+@media (max-width:900px) {
+  .footer-content{
     display: flex;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+
+  }
+
+  img{
+    width:90%;
   }
   }

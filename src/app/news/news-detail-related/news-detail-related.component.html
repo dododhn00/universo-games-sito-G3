@@ -5,10 +5,12 @@
         class="general-div"
         [class.div1]="i == 0"
         [class.div2]="i == 1"
-        [class.div3]="i == 2">
+        [class.div3]="i == 2"
+        (click)="navigateToDetail(n._id)"
+        >
 
-        <img [src]="n.imageUrl">
-            <figcaption><p>{{n.title}}</p></figcaption>
+        <img [src]="n.imageUrl" onerror="this.src='assets/images/news-placeholder.jpg';">
+            <p>{{n.title}}</p>
         </div>
     </div>
 </div>
