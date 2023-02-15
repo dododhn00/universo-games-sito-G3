@@ -1,7 +1,15 @@
-.container {
-  margin-top: 10rem;
+
+
+/*.header h2{*/
+/*  padding: 1rem;*/
+
+
+/*  text-align: center;*/
+/*  font-size: 1rem;*/
+/*  color:white;*/
+/*}*/
+
+.header{
+  margin-bottom:2rem;
 }
 
-h1 {
-  text-align: center;
-}

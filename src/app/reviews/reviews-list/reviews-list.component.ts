@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Review } from 'src/app/model/review';
 import { ReviewsService } from '../service/reviews.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-reviews-list',
@@ -12,13 +13,15 @@ export class ReviewsListComponent {
   reviews!: Review[];
 
   constructor(
-    private service: ReviewsService
+    private service: ReviewsService,
+    private router:Router,
   ) {}
 
   ngOnInit(): void {
 
     this.service.getReviews().subscribe(data => {
-      this.reviews = data
+      this.reviews = data;
+      this.reviews.splice(0,1);
     });
 
   }
@@ -49,6 +52,10 @@ export class ReviewsListComponent {
       const dt2 = Date.parse(b.publicationDate);
       return dt2 - dt1
     })
+  }
+
+  navigateToDetail(id:string){
+    this.router.navigateByUrl('reviews-detail/' + id);
   }
 
 }

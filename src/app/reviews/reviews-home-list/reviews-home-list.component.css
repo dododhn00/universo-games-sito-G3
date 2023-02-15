@@ -2,6 +2,7 @@
   margin-top: 10rem;
   margin-left: 15%;
   margin-right: 15%;
+
 }
 .reviews-container {
   display: grid;
@@ -14,10 +15,9 @@
 }
 
 .general-div {
-  border: 1px red solid;
+
   width: 15vw;
   height: 10vw;
-  box-shadow: 5px 10px rgba(0, 0, 0, 0.753);
 }
 
 /* .div1 {
@@ -34,9 +34,8 @@
 
 .div4 {
   grid-area: 1 / 4 / 2 / 5;
-  border: 1px solid red;
-  background-image: linear-gradient(blue, red);
-  box-shadow: 5px 10px rgba(0, 0, 0, 0.753);
+
+  background: linear-gradient(#e66465, #9198e5);
   cursor: pointer;
 
   display: flex;
@@ -67,17 +66,9 @@ img {
   position: relative;
   grid-area: 1 / 1 / 2 / 2;
   cursor: pointer;
+
 }
-.div2 {
-  position: relative;
-  grid-area: 1 / 2 / 2 / 3;
-  cursor: pointer;
-}
-.div3 {
-  position: relative;
-  grid-area: 1 / 3 / 2 / 4;
-  cursor: pointer;
-}
+
 
 .div1 img {
   width: 100%;
@@ -85,38 +76,18 @@ img {
 }
 .div1 figcaption {
   position: absolute;
-  bottom: 1rem;
-  left: 0.5rem;
-  width: 90%;
-  background-color: rgba(0, 0, 0, 0.404);
+  bottom: 0rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.93));
+  padding: 2rem;
+  text-align: center;
+  left: 0rem;
+  font-size: 1.1rem;
+  width:100%;
+  height:100%;
+  margin: 0 auto;
 }
 
-.div2 img {
-  width: 100%;
-  height: 100%;
-}
-.div2 figcaption {
-  position: absolute;
-  bottom: 1rem;
-  left: 0.5rem;
-  margin-right: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.404);
-  width: 90%;
-}
 
-.div3 img {
-  width: 100%;
-  height: 100%;
-  opacity: 0.9;
-}
-.div3 figcaption {
-  position: absolute;
-  bottom: 1rem;
-  left: 0.5rem;
-  margin-right: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.404);
-  width: 90%;
-}
 
 p {
   display: -webkit-box;
@@ -125,6 +96,8 @@ p {
   overflow: hidden;
   justify-content: baseline;
   padding: 2px;
+  color:white;
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -138,12 +111,6 @@ p {
 
   .div1 {
     grid-area: 1 / 1 / 2 / 2;
-  }
-  .div2 {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  .div3 {
-    grid-area: 3 / 1 / 4 / 2;
   }
 
   .div4 {
@@ -161,31 +128,14 @@ p {
 
   .div1 figcaption {
     position: absolute;
-    bottom: 2rem;
+
     width: 98%;
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     background-color:transparent;
 
   }
-  .div2 figcaption {
-    position: absolute;
-    bottom: 2rem;
-    width: 98%;
-    padding: 2rem;
-    font-size: 1.5rem;
-    background-color:transparent;
 
-  }
-  .div3 figcaption {
-    position: absolute;
-    bottom: 2rem;
-    width: 98%;
-    padding: 2rem;
-    font-size: 1.5rem;
-    background-color:transparent;
-
-  }
 
   p{
     background-color: rgba(0, 0, 0, 0.404);
@@ -193,12 +143,12 @@ p {
     padding: 1rem;
     padding-top: 2px;
     padding-bottom: 2px ;
-    bottom: 2rem;
+    bottom: 1.4rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    justify-content: baseline;
     line-height: 2rem;
+    vertical-align: baseline;
   }
 }

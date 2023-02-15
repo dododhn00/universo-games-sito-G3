@@ -11,7 +11,7 @@
 } */
 
 .header {
-  --background: rgba(0, 128, 128, 0.514);
+  --background: white;
   background-color: var(--background);
   position: fixed;
   top: 0;
@@ -23,9 +23,7 @@
   /* border-radius: 2rem; */
 }
 
-.header:hover {
-  background-color: rgba(0, 128, 128, 0.914);
-}
+
 
 .nav-toggle {
   display: none;
@@ -37,7 +35,7 @@ h1 {
   text-decoration: none;
   color: black;
   margin-top: 1rem;
-  margin-left: 1rem;
+  margin-left: -8rem;
 }
 .header a {
   text-decoration: none;
@@ -45,7 +43,8 @@ h1 {
 .logo-div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+
 }
 /* .logo{
   border: red solid 1px;
@@ -218,7 +217,7 @@ nav a:hover {
     right: -1rem;
     margin-right: 10rem;
   }
- 
+
 
   .list-group-item a {
     /* display: -webkit-box; */
