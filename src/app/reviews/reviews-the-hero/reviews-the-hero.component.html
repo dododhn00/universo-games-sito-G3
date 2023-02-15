@@ -1,7 +1,22 @@
-<div class="container">
-    <img [src]="reviews[0].imageUrls[0]" [alt]="reviews[0].title" class="review-image" />
-    <p>{{ reviews[0].title }} ({{ reviews[0].publicationDate }})</p>
-    <p>{{ reviews[0].content }}</p>
-    <p>{{ reviews[0].reviewerName }} - {{ reviews[0].score }}⭐</p>
-    <p></p>
+
+<div class="header">
+  <h1>RECENSIONI</h1>
+</div>
+
+<div class="generalContainer">
+  <div class="container">
+    <div class="image-container">
+        <img [src]="reviews[0].imageUrls[0]" [alt]="reviews[0].title" class="review-image" />
+
+    </div>
+    <div class="details">
+      <div class="score">
+        <div>{{ reviews[0].score }}</div>
+      </div>
+
+      <h2>{{ reviews[0].title }}</h2>
+      <h3>{{ reviews[0].reviewerName }}</h3>
+      <p class="content">{{ reviews[0].content }}</p>
+    </div>
+  </div>
 </div>

@@ -1,35 +1,42 @@
 <div class="container">
   <div class="filter-container">
     <button mat-fab extended color="primary" value="scoreMaxMin" (click)="orderByScoreMaxMin()">
-      <mat-icon>favorite</mat-icon>
-      Valutazione ⬆
+      <mat-icon>arrow_upward</mat-icon>
+      Valutazione
     </button>
     <button mat-fab extended color="primary" value="scoreMinMax" (click)="orderByScoreMinMax()">
-      <mat-icon>favorite</mat-icon>
-      Valutazione ⬇
+      <mat-icon>arrow_downward</mat-icon>
+      Valutazione
     </button>
     <button mat-fab extended color="primary" value="releaseDateMaxMin" (click)="orderByDateMaxMin()">
-      <mat-icon>favorite</mat-icon>
-      Data pubblicazione ⬆
+      <mat-icon>arrow_upward</mat-icon>
+      Data pubblicazione
     </button>
     <button mat-fab extended color="primary" value="releaseDateMinMax" (click)="orderByDateMinMax()">
-      <mat-icon>favorite</mat-icon>
-      Data pubblicazione ⬇
+      <mat-icon>arrow_downward</mat-icon>
+      Data pubblicazione
     </button>
   </div>
 
-  <div class="review-card" *ngFor="let review of reviews">
-    <div class="image-card">
-      <img [src]="review.imageUrls[0]" [alt]="review.title" class="review-image" />
-      <div class="score-img">{{ review.score }}</div>
-    </div>
-    <div class="text-card">
-      <p>
-        Titolo: {{ review.title }} <br>
-        Autore: {{ review.reviewerName }} <br>
-        Pubblicazione: {{ review.publicationDate }} <br>
-        Contenuto: {{ review.content }}
-      </p>
-    </div>
-  </div>
+  <div class="review-card" *ngFor="let review of reviews" (click)="navigateToDetail(review._id)" >
+      <div class="image-card" >
+        <img [src]="review.imageUrls[0]" [alt]="review.title" class="review-image" />
+        <div class="bottom-left">
+                <div>{{ review.score }}</div>
+        </div>
+      </div>
+
+      <div class="text-card">
+        <h2>Titolo: {{ review.title }}</h2>
+          <p>Autore: {{ review.reviewerName }}</p>
+          <p>Pubblicazione: {{ review.publicationDate }}</p>
+        <div class="content">
+          <p>Contenuto: {{ review.content }}</p>
+        </div>
+        </div>
+
+      </div>
+
 </div>
+
+

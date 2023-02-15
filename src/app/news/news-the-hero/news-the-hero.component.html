@@ -8,30 +8,33 @@
       </div>
     </div>
   </div> -->
-  
-<div class="containerBox">
-  <div
-    *ngFor="let news of heroNews | slice : 0 : 4; let first = first; let i = index" class="news"
-    [class.news1]="i == 0"
-    [class.news2]="i == 1"
-    [class.news3]="i == 2"
-    [class.news4]="i == 3"
-    [routerLink]="['news-detail', news._id]"
-  >
-    <div  class="newscontainer">
-      <img [src]="news.imageUrl" [alt]="news.title" />
-        <div
-        [class.bottom-left1]="i == 0"
-        [class.bottom-left]="i == 1 || i == 2 || i == 3"
-        >
-          <p>{{ news.category }}</p>
-          <p>{{ news.title }}</p>
-          <p *ngIf="first"> {{ news.content }}</p>
+<div class="generalContainer">
+  <div class="containerBox">
+    <div
+      *ngFor="let news of heroNews | slice : 0 : 4; let first = first; let i = index" class="news"
+      [class.news1]="i == 0"
+      [class.news2]="i == 1"
+      [class.news3]="i == 2"
+      [class.news4]="i == 3"
+      [routerLink]="['news-detail', news._id]"
+    >
+      <div  class="newscontainer">
+
+        <img [src]="news.imageUrl" [alt]="news.title" />
+          <div
+          [class.bottom-left1]="i == 0"
+          [class.bottom-left]="i == 1 || i == 2 || i == 3"
+          >
+            <p>{{ news.category }}</p>
+            <p>{{ news.title }}</p>
+            <p *ngIf="first"> {{ news.content }}</p>
+          </div>
+
+          <div class="date"
+          [class.date1]="i == 0"
+          >
+              {{ news.publicationDate }}
         </div>
-        <div class="date"
-        [class.date1]="i == 0"
-        >
-            {{ news.publicationDate }}
       </div>
     </div>
   </div>
