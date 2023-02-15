@@ -29,6 +29,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { SearchPipe } from './search.pipe';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatChipsModule} from "@angular/material/chips";
+import {MatListModule} from "@angular/material/list";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -63,7 +66,10 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatToolbarModule,
     MatIconModule,
     MatPaginatorModule,
-    MatButtonModule
+    MatButtonModule,
+    MatChipsModule,
+    MatListModule,
+    MatCardModule
 
   ],
   providers: [],

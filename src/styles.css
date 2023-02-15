@@ -4,16 +4,17 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-color: white;
-background-color: rgb(19, 19, 19); }
+body { margin:  auto; font-family: Roboto, "Helvetica Neue", sans-serif;
+color: black;
+background-color: white; }
 
 :root {
     font-family: "Roboto", sans-serif;
   }
-  
+
   *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
+

@@ -2,17 +2,19 @@
  <div class="container">
     <div *ngFor="let news of pageSlice">
     <div class="singlenews-container" [routerLink]="['news-detail', news._id]">
+
+<!--      PAGESLICE[0] PERCHE' AL MOMENTO ERA L'UNICO CON L'IMMAGINE, SOSTITUIRE CON news.imageUrl-->
         <div class="image-container">
-            <img [src]="news.imageUrl" [alt]="news.title" class="news-image" />
+            <img [src]="pageSlice[0].imageUrl" [alt]="news.title" class="news-image" />
         </div>
         <div>
             <h2>{{ news.title }}</h2>
-            <p>{{ news.publicationDate }}</p>
+            <p>{{ news.publicationDate }} | Category: {{ news.category }}</p>
             <p>{{ news.authorName }}</p>
             <p class="content">{{ news.content }}</p>
-            <p>Category: {{ news.category }}</p>
         </div>
     </div>
+      <mat-divider></mat-divider>
 </div>
 <mat-paginator
 [length]="this.otherNews.length"
@@ -21,6 +23,6 @@
 
 (page)="OnPageChange($event)"
 >
-</mat-paginator> 
+</mat-paginator>
 </div>
 

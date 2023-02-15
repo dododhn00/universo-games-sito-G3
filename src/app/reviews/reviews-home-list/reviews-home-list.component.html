@@ -3,15 +3,12 @@
 <div class="reviews-container">
   <div *ngFor="let reviews of heroReviews; let i = index">
     <div
-      class="general-div"
-      [class.div1]="i == 0"
-      [class.div2]="i == 1"
-      [class.div3]="i == 2"
+      class="general-div" class="div1"
 
       [routerLink]="['reviews-detail', reviews._id]"
     >
       <img [src]="reviews.imageUrls[0]" />
-        <figcaption> <p> {{ reviews.title }} </p> </figcaption>
+        <figcaption> <p> {{ reviews.title }}</p> <p>{{reviews.score}}/10</p> </figcaption>
     </div>
   </div>
   <div class="div4" [routerLink]="['reviews']">
