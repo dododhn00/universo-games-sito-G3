@@ -3,15 +3,19 @@
   *ngIf="review$ | async as review"
 >
   <div class="img-container">
-    <img [src]="review.imageUrls[0]" class="" />
+    <img [src]="review.imageUrls[0]" onerror="this.src='assets/images/reviewsPlaceholder.jpg';" class="" />
 
     <div class="infos-container">
 
       <p class="title">{{ review.title }}</p>
       <div class="flex py-4">
-        <p class="score">
+        <!-- <p class="score">
           {{ review.score }}
-        </p>
+        </p> -->
+        <div class="star">
+  <star-rating [value]="review.score/2" checkedcolor="yellow" uncheckedcolor="gray" size="24px"></star-rating>
+ 
+</div>
         <p class="author">
           di {{ review.reviewerName }}
         </p>
@@ -19,3 +23,4 @@
     </div>
 </div>
 </div>
+

@@ -32,6 +32,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
+import { RatingModule } from "ng-starrating";
 
 @NgModule({
   declarations: [
@@ -70,7 +71,7 @@ import {MatCardModule} from "@angular/material/card";
     MatChipsModule,
     MatListModule,
     MatCardModule,
-
+    RatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
