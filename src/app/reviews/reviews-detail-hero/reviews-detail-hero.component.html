@@ -3,7 +3,7 @@
   *ngIf="review$ | async as review"
 >
   <div class="img-container">
-    <img [src]="review.imageUrls[0]" class="" />
+    <img [src]="review.imageUrls[0]" onerror="this.src='assets/images/reviewsPlaceholder.jpg';" class="" />
 
     <div class="infos-container">
 
