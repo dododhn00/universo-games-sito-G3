@@ -101,11 +101,25 @@
 
   /* ########### Inside image positioning ############### */
 
+.bottom-left1 h2{
+  font-size: 2rem;
+}
+
+.bottom-left h2{
+  font-size: 1rem;
+  line-height: 1.3rem
+}
+
+.bottom-left p{
+  font-size:0.8rem;
+}
+
   .bottom-left1 {
     position: absolute;
     bottom: 0rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.12), black);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.43), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.86));
     padding: 2rem;
+    padding-top: 3rem;
     text-align: left;
     font-size: 1.1rem;
     width:100%;
