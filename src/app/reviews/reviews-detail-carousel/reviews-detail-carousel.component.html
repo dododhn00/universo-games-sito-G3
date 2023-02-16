@@ -1,1 +1,16 @@
-<p>reviews-detail-carousel works!</p>
+
+<h2>Immagini dal gioco:</h2>
+<ng-container
+  *ngIf="review$ | async as review"
+>
+<carousel [interval]="3000" [isAnimated]="true" [showIndicators]="false" class="carosello">
+    <ng-container *ngFor="let reviews of review.imageUrls" class="">
+      <slide class="slide">
+            <div class="image-container">
+              <img [src]="reviews" [alt]="review.title" />
+            </div>
+      </slide>
+    </ng-container>
+  
+  </carousel>
+</ng-container> 

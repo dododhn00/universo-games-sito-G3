@@ -12,10 +12,10 @@
   margin-right: 15%;
   margin-left: 15%;
   margin-bottom: 10rem;
+
 }
 
 .general-div {
-
   width: 15vw;
   height: 10vw;
 }
@@ -59,7 +59,9 @@
 }
 
 img {
-  width: 15vw;
+  height: 100%; 
+  width: 100%; 
+  object-fit: contain
 }
 
 .div1 {
@@ -75,6 +77,38 @@ img {
   height: 100%;
 }
 .div1 figcaption {
+  position: absolute;
+  bottom: 0rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.93));
+  padding: 2rem;
+  text-align: center;
+  left: 0rem;
+  font-size: 1.1rem;
+  width:100%;
+  height:100%;
+  margin: 0 auto;
+}
+.div2 img {
+  width: 100%;
+  height: 100%;
+}
+.div2 figcaption {
+  position: absolute;
+  bottom: 0rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.93));
+  padding: 2rem;
+  text-align: center;
+  left: 0rem;
+  font-size: 1.1rem;
+  width:100%;
+  height:100%;
+  margin: 0 auto;
+}
+.div3 img {
+  width: 100%;
+  height: 100%;
+}
+.div3 figcaption {
   position: absolute;
   bottom: 0rem;
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.93));
@@ -150,5 +184,6 @@ p {
     overflow: hidden;
     line-height: 2rem;
     vertical-align: baseline;
+    z-index: 99;
   }
 }

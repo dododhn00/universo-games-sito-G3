@@ -4,25 +4,21 @@
   width:70%;
 }
 
-.generalContainer{
-  /*background-color: #191919;*/
-}
 
-
-.container{
+ .container{
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
 
   flex-wrap:wrap;
   width:70%;
   margin: 0 auto;
   background-color: #ffffff;
-  /*color: white;*/
+  margin-bottom: 4rem;
 }
 
 .image-container {
   text-align: center;
-  width:55%;
+  width:66%;
 }
 
 img{
@@ -30,11 +26,11 @@ img{
   height: 100%;
   object-fit: cover;
 }
-
+ 
 .details{
   border: 0.1rem solid #e6e6e6;
   padding: 1.2rem;
-  width:43%;
+  width:33%;
   word-wrap: break-word;
   text-align:center;
 }
@@ -105,3 +101,13 @@ img{
     width:100%;
   }
 }
+
+
+/* oooooooooooooooooooooooooooooooooooooo */
+
+
+.carosello{
+  width: 800px;
+}
+
+

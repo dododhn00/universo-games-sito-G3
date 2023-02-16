@@ -1,10 +1,15 @@
 .container {
   margin-top: 2.7rem;
   text-align: center;
+  margin-bottom: 5rem;
 }
 
 .filter-container{
   margin-bottom: 2.7rem;
+}
+
+.review-card:hover {
+  background-color: gainsboro;
 }
 
 .review-card {
@@ -15,6 +20,8 @@
   margin: 0 auto;
   width: 70%;
   height:100%;
+  cursor: pointer;
+  padding-right: .5rem;
 }
 
 .image-card{
