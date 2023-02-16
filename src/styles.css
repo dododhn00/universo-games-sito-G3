@@ -26,3 +26,8 @@ margin-bottom: 2rem;}
   justify-content: center!important;
   margin-top:1.5rem;
 }
+
+.caroselloDetail img {
+  width:650px!important;
+  max-width:100%;
+}

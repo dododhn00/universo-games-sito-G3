@@ -12,24 +12,26 @@ import { ReviewsService } from '../service/reviews.service';
 export class ReviewsDetailContentComponent {
 
   constructor(private reviewsService: ReviewsService, private router: Router, private route: ActivatedRoute){}
-
-  review$!: Observable<Review>;
+  text = '';
+  readingTimeCalculated = '';
+  review ?: Review;
 
   ngOnInit(): void {
     this.route.params.subscribe((p)=> {
       const id = p['id'];
-      this.review$ = this.reviewsService.getSingleReview(id);
-      this.reviewsService.getSingleReview(id).subscribe();
+      this.reviewsService.getSingleReview(id).subscribe((res) => {
+        this.review = res;
+        this.text = res.content;
+        this.readingTimeCalculated = this.readingTime();
+      })
+
     });
 
   }
 
-    readingTime(text: string) {
-      this.review$.pipe(
-        map((review: Review) => text = review.content)
-      );
-      console.log("Ciao " + text);
-      const words = text.split(" ").length;
+    readingTime() {
+      this.text = this.text;
+      const words = this.text.split(" ").length;
       const minutes = Math.ceil(words / 3);
       if(minutes < 60) {
         return minutes + " secondi";
@@ -41,7 +43,7 @@ export class ReviewsDetailContentComponent {
           return "Circa " + time + " minuti."
         }
       }
-      return;
+      return '';
     }
 
 }
