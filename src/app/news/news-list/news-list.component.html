@@ -3,9 +3,8 @@
     <div *ngFor="let news of pageSlice">
     <div class="singlenews-container" [routerLink]="['news-detail', news._id]">
 
-
-        <div class="image-container">
-            <img [src]="news.imageUrl" onerror="this.src='assets/images/imgcomingsoon.webp';" [alt]="news.title" class="news-image" />
+            <div class="image-container">
+                <img [src]="news.imageUrl" onerror="this.src='assets/images/imgcomingsoon.webp';" [alt]="news.title" class="news-image" />
         </div>
         <div>
             <h2>{{ news.title }}</h2>
