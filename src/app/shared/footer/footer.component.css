@@ -119,4 +119,8 @@ display: block;
   img{
     width:90%;
   }
+
+  .about p{
+    text-align: center;
+  }
   }

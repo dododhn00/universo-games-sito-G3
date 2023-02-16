@@ -1,25 +1,16 @@
-<!-- <div
-  class="container"
+
+<h2>Immagini dal gioco:</h2>
+<ng-container
   *ngIf="review$ | async as review"
 >
-<carousel [interval]="4000" [isAnimated]="true" [showIndicators]="false" class="carosello">
-    <ng-container *ngFor="let reviews of reviews">
-      <slide *ngIf="reviews.score == 10" >
-        <div class="container">
+<carousel [interval]="3000" [isAnimated]="true" [showIndicators]="false" class="carosello">
+    <ng-container *ngFor="let reviews of review.imageUrls" class="">
+      <slide class="slide">
             <div class="image-container">
-              <img [src]="reviews.imageUrls[0]" [alt]="reviews.title" class="review-image" />
+              <img [src]="reviews" [alt]="review.title" />
             </div>
-            <div class="details">
-              <div class="score">
-                <div>{{ reviews.score }}</div>
-              </div>
-              <h2>{{ reviews.title }}</h2>
-              <h3>{{ reviews.reviewerName }}</h3>
-              <p class="content">{{ reviews.content }}</p>
-            </div>
-          </div>
       </slide>
     </ng-container>
   
   </carousel>
-  </div> -->
+</ng-container> 
