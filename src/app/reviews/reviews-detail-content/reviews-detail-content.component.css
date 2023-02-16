@@ -7,7 +7,7 @@
 }
 
 .separator {
-  max-width: 10rem;
+  max-width: 18.5rem;
   margin-left: 0;
   margin-bottom: 2rem;
 }
@@ -25,3 +25,4 @@ p{
 .author{
     font-style: italic;
 }
+
