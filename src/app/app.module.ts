@@ -35,6 +35,7 @@ import {MatCardModule} from "@angular/material/card";
 import { ReviewsDetailCarouselComponent } from './reviews/reviews-detail-carousel/reviews-detail-carousel.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import {NgxStarsModule} from "ngx-stars";
+import { MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -74,8 +75,10 @@ import {NgxStarsModule} from "ngx-stars";
     MatChipsModule,
     MatListModule,
     MatCardModule,
+    NgxStarsModule,
+    MatTooltipModule
     CarouselModule.forRoot(),
-    NgxStarsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

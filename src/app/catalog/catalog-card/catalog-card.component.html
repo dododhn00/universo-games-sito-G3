@@ -22,7 +22,7 @@
 </div>
 
 <div class="container">
-  <div class="card" *ngFor="let videogame of videogames">
+  <div class="card" *ngFor="let videogame of videogames; let i = index">
 
       <mat-card class="card-container">
         <mat-card-header>
@@ -32,13 +32,32 @@
 
         <mat-card-content class="image-container">
         <img [src]="videogame.coverImage" onerror="this.src='assets/images/sad.png';">
-          <h3>Dettaglio:</h3>
-          <div class="dettagli">
-            <p> Genere: {{ videogame.genre }}</p>
-            <p> Autore: {{ videogame.publisher }}</p>
-            <p> Produttore: {{ videogame.softwareHouse }}</p>
-            <p> Players: {{ videogame.numberOfPlayers }}</p>
-            <p> Data rilascio: {{ videogame.releaseDate }}</p>
+          <div *ngIf="!areLanguagesShown[i]">
+            <h3>Dettaglio:</h3>
+            <div class="dettagli">
+              <p> Genere: {{ videogame.genre }}</p>
+              <p> Autore: {{ videogame.publisher }}</p>
+              <p> Produttore: {{ videogame.softwareHouse }}</p>
+              <p> Players: {{ videogame.numberOfPlayers }}</p>
+              <p> Release: {{ videogame.releaseDate }}</p>
+              <button matTooltip="Clicca per visualizzare le lingue" class="swapCard" color="basic" mat-button (click)="showLanguages(i);">
+                <span>Languages<mat-icon >arrow_right_alt</mat-icon></span>
+              </button>
+            </div>
+          </div>
+
+          <div *ngIf="areLanguagesShown[i]">
+          <!-- Show when languages button is clicked-->
+            <h3>Lingue:</h3>
+            <div class="container-languages">
+
+              <p> Voice: <span *ngFor="let voice of videogame.languages.voice">| {{voice}} </span></p>
+              <p> Text: <span *ngFor="let text of videogame.languages.text">| {{text}} </span></p>
+
+              <button matTooltip="Clicca per visualizzare le lingue" class="swapCard" id="backSwap" color="basic" mat-button (click)="showLanguages(i);">
+                <span><mat-icon>arrow_left_alt</mat-icon>Dettaglio</span>
+              </button>
+            </div>
           </div>
         </mat-card-content>
       </mat-card>

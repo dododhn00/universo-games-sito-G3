@@ -12,6 +12,7 @@ import { CatalogService } from '../service/catalog.service';
 export class CatalogCardComponent implements OnInit {
 
   videogames!: Videogame[];
+  areLanguagesShown !: boolean[];
 
   constructor(
     private service: CatalogService
@@ -21,6 +22,9 @@ export class CatalogCardComponent implements OnInit {
 
     this.service.getVideoGames().subscribe(data => {
       this.videogames = data;
+      this.areLanguagesShown = new Array<boolean>(data.length);
+      this.areLanguagesShown.fill(false)
+
     });
 
   }
@@ -51,6 +55,16 @@ export class CatalogCardComponent implements OnInit {
       const dt2 = Date.parse(b.releaseDate);
       return dt1 - dt2
     })
+  }
+
+
+
+  showLanguages(index:number) {
+    if(this.areLanguagesShown[index]){
+      this.areLanguagesShown[index] = false;
+    }else{
+      this.areLanguagesShown[index] = true;
+    }
   }
 
 }
