@@ -1,13 +1,6 @@
 <div class="container">
   <div class="filter-container">
-    <div class="search-box">
-      <input type="text"
-        class="input-search"
-        placeholder="Search for reviews..."
-        [formControl]="searchText"
-      />
-    </div>
-
+    
     <button mat-fab extended color="primary" value="scoreMaxMin" (click)="orderByScoreMaxMin()">
       <mat-icon>arrow_upward</mat-icon>
       Valutazione
@@ -26,6 +19,14 @@
     </button>
   </div>
 
+  <div class="search-box">
+    <input type="text"
+      class="input-search"
+      placeholder="Search for reviews..."
+      [formControl]="searchText"
+    />
+  </div>
+  
   <div class="review-card" *ngFor="let review of reviews" (click)="navigateToDetail(review._id)" >
       <div class="image-card">
         <img [src]="review.imageUrls[0]" onerror="this.src='assets/images/imgcomingsoon.webp';" [alt]="review.title" class="review-image" />

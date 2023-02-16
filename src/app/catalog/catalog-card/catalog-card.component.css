@@ -118,3 +118,30 @@ button {
   }
 
 }
+
+
+.search-box{
+  text-align: center;
+  margin-right: 15%;
+  margin-left: 15%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-box input::placeholder{
+color: rgba(255, 255, 255, 0.74);
+padding-left: 1rem;
+}
+.search-box input{
+  border:#673ab7 3px solid;
+  background-color:#673ab7;
+  font-size: 2rem;
+  color: white;
+  border-radius: 3rem;
+  width: 60%;
+  height: 3rem;
+  padding-left: 1rem;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  text-align: center;
+}
+
