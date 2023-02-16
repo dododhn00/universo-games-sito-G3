@@ -32,9 +32,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatChipsModule} from "@angular/material/chips";
 import {MatListModule} from "@angular/material/list";
 import {MatCardModule} from "@angular/material/card";
-import { RatingModule } from "ng-starrating";
 import { ReviewsDetailCarouselComponent } from './reviews/reviews-detail-carousel/reviews-detail-carousel.component';
-
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -73,7 +72,7 @@ import { ReviewsDetailCarouselComponent } from './reviews/reviews-detail-carouse
     MatChipsModule,
     MatListModule,
     MatCardModule,
-    RatingModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

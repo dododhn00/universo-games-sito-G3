@@ -2,7 +2,7 @@
 <div class="header">
   <h1>RECENSIONI</h1>
 </div>
-
+<!-- 
 <div class="generalContainer">
   <div class="container">
     <div class="image-container">
@@ -19,4 +19,25 @@
       <p class="content">{{ reviews[0].content }}</p>
     </div>
   </div>
-</div>
+</div> -->
+
+<carousel [interval]="4000" [isAnimated]="true" [showIndicators]="false" class="carosello">
+  <ng-container *ngFor="let reviews of reviews">
+    <slide *ngIf="reviews.score == 10" >
+      <div class="container">
+          <div class="image-container">
+            <img [src]="reviews.imageUrls[0]" [alt]="reviews.title" class="review-image" />
+          </div>
+          <div class="details">
+            <div class="score">
+              <div>{{ reviews.score }}</div>
+            </div>
+            <h2>{{ reviews.title }}</h2>
+            <h3>{{ reviews.reviewerName }}</h3>
+            <p class="content">{{ reviews.content }}</p>
+          </div>
+        </div>
+    </slide>
+  </ng-container>
+
+</carousel>
