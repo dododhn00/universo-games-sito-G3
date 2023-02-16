@@ -76,7 +76,7 @@ import { MatTooltipModule} from '@angular/material/tooltip';
     MatListModule,
     MatCardModule,
     NgxStarsModule,
-    MatTooltipModule
+    MatTooltipModule,
     CarouselModule.forRoot(),
 
   ],
