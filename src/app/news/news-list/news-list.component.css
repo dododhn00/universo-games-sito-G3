@@ -20,9 +20,15 @@
 }
 
 img{
-  max-width: 20rem;
-  object-fit: cover;
+  width:320px;
+  height:180px;
 }
+
+.singlenews-container:hover{
+background-color: rgba(220, 220, 220, 0.473);
+cursor: pointer;
+}
+
 
 .singlenews-container{
     display: flex;
