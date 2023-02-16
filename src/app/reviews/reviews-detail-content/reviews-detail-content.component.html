@@ -1,11 +1,11 @@
 <div
   class="container"
-  *ngIf="review$ | async as review"
+  *ngIf="review"
 >
 
     <div class="infos-container">
 
-      <p class="date">{{ review.publicationDate }} - <span class="reading-time">Tempo di lettura: {{ readingTime(review.content) }}</span></p>
+      <p class="date">{{ review.publicationDate }} - <span class="reading-time">Tempo di lettura: {{ readingTimeCalculated}}</span></p>
       <hr class="separator">
 
       <p class="title">{{ review.content }}</p>
