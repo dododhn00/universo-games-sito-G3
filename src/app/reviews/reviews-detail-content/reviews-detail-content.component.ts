@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Review } from 'src/app/model/review';
 import { ReviewsService } from '../service/reviews.service';
 
@@ -15,20 +15,22 @@ export class ReviewsDetailContentComponent {
 
   review$!: Observable<Review>;
 
+  ngOnInit(): void {
+    this.route.params.subscribe((p)=> {
+      const id = p['id'];
+      this.review$ = this.reviewsService.getSingleReview(id);
+      this.reviewsService.getSingleReview(id).subscribe();
+    });
 
+  }
 
-    ngOnInit(): void {
-      this.route.params.subscribe((p)=> {
-        const id = p['id'];
-        this.review$ = this.reviewsService.getSingleReview(id);
-        this.reviewsService.getSingleReview(id).subscribe()
-      });
-    }
-
-    readingTime() {
-      const text = "a a a a a a a a a a a a a a a a a a  a"
+    readingTime(text: string) {
+      this.review$.pipe(
+        map((review: Review) => text = review.content)
+      );
+      console.log("Ciao " + text);
       const words = text.split(" ").length;
-      const minutes = Math.ceil(500 / 3);
+      const minutes = Math.ceil(words / 3);
       if(minutes < 60) {
         return minutes + " secondi";
       } else {
@@ -41,7 +43,5 @@ export class ReviewsDetailContentComponent {
       }
       return;
     }
-
-    time = this.readingTime();
 
 }
