@@ -26,7 +26,7 @@
       [formControl]="searchText"
     />
   </div>
-  
+
   <div class="review-card" *ngFor="let review of reviews" (click)="navigateToDetail(review._id)" >
       <div class="image-card">
         <img [src]="review.imageUrls[0]" onerror="this.src='assets/images/imgcomingsoon.webp';" [alt]="review.title" class="review-image" />
@@ -38,7 +38,7 @@
       <div class="text-card">
         <h2>Titolo: {{ review.title }}</h2>
           <p>Autore: {{ review.reviewerName }}</p>
-          <p>Pubblicazione: {{ review.publicationDate }}</p>
+          <p>Pubblicazione: {{ review.publicationDate | date:'dd-MM-yyyy'}}</p>
         <div class="content">
           <p>Contenuto: {{ review.content }}</p>
         </div>

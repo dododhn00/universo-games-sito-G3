@@ -5,7 +5,7 @@
 
     <div class="infos-container">
 
-      <p class="date">{{ review.publicationDate }} - <span class="reading-time">Tempo di lettura: {{ readingTimeCalculated}}</span></p>
+      <p class="date">{{ review.publicationDate | date:'dd-MM-yyyy' }} - <span class="reading-time">Tempo di lettura: {{ readingTimeCalculated}}</span></p>
       <hr class="separator">
 
       <p class="title">{{ review.content }}</p>
