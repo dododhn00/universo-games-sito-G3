@@ -74,7 +74,7 @@ import {NgxStarsModule} from "ngx-stars";
     MatChipsModule,
     MatListModule,
     MatCardModule,
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
     NgxStarsModule
   ],
   providers: [],
