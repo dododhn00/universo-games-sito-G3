@@ -1,5 +1,13 @@
 <div class="container">
   <div class="filter-container">
+    <div class="search-box">
+      <input type="text"
+        class="input-search"
+        placeholder="Search for reviews..."
+        [formControl]="searchText"
+      />
+    </div>
+
     <button mat-fab extended color="primary" value="scoreMaxMin" (click)="orderByScoreMaxMin()">
       <mat-icon>arrow_upward</mat-icon>
       Valutazione

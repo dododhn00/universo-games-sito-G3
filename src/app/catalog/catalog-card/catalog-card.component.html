@@ -3,6 +3,13 @@
   <h2>Esplora il catalogo completo dei giochi da noi recensiti. Buon divertimento!</h2>
 </div>
 <div class="filter-container">
+  <div class="search-box">
+    <input type="text"
+      class="input-search"
+      placeholder="Search for videogames..."
+      [formControl]="searchText"
+    />
+  </div>
   <button mat-fab extended color="primary" value="alphabeticalAZ" (click)="orderByAZ()">
     <mat-icon>sort_by_alpha</mat-icon>
     Alfabetico A-Z

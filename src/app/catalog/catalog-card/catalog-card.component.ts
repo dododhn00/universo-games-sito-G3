@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Videogame } from 'src/app/model/videogame';
@@ -12,7 +13,15 @@ import { CatalogService } from '../service/catalog.service';
 export class CatalogCardComponent implements OnInit {
 
   videogames!: Videogame[];
-  areLanguagesShown !: boolean[];
+  areLanguagesShown!: boolean[];
+
+  searchText = new FormControl("", {
+    nonNullable: true,
+    validators: [
+      Validators.required,
+    ]
+  });
+
 
   constructor(
     private service: CatalogService
@@ -25,7 +34,21 @@ export class CatalogCardComponent implements OnInit {
       this.areLanguagesShown = new Array<boolean>(data.length);
       this.areLanguagesShown.fill(false)
 
+      this.searchText.valueChanges.subscribe((search) => {
+        if (search !== "") {
+          this.videogames = data.filter((it) =>
+            it.title.toLocaleLowerCase().includes(search)
+            || it.category.toLocaleLowerCase().includes(search)
+            || it.genre.toLocaleLowerCase().includes(search)
+            || it.softwareHouse.toLocaleLowerCase().includes(search)
+            || it.publisher.toLocaleLowerCase().includes(search))
+        }
+        else {
+          this.videogames = data;
+        }
+      })
     });
+
 
   }
 
