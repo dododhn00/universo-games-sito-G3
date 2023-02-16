@@ -21,3 +21,8 @@ background-color: white; }
 span.sr-only{
 display: none;
 margin-bottom: 2rem;}
+
+.stars-line{
+  justify-content: center!important;
+  margin-top:1.5rem;
+}
