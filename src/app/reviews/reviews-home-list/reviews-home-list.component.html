@@ -1,15 +1,17 @@
 <h1 class="title">Le ultime recensioni:</h1>
 
 <div class="reviews-container">
-  <div *ngFor="let reviews of heroReviews; let i = index">
-    <div
-      class="general-div" class="div1"
-
+  <div *ngFor="let reviews of heroReviews; let i = index"
+      class="general-div" 
+      [class.div1]="i == 0"
+      [class.div2]="i == 1"
+      [class.div3]="i == 2"
       [routerLink]="['reviews-detail', reviews._id]"
     >
+    <ng-container>
       <img [src]="reviews.imageUrls[0]" />
-        <figcaption> <p> {{ reviews.title }}</p> <p>{{reviews.score}}/10</p> </figcaption>
-    </div>
+      <figcaption> <p> {{ reviews.title }}</p> <p>{{reviews.score}}/10</p> </figcaption>
+    </ng-container>
   </div>
   <div class="div4" [routerLink]="['reviews']">
     <h2>Altre recensioni</h2>
