@@ -36,6 +36,7 @@ import { ReviewsDetailCarouselComponent } from './reviews/reviews-detail-carouse
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import {NgxStarsModule} from "ngx-stars";
 import { MatTooltipModule} from '@angular/material/tooltip';
+import { ReviewsDetailVideogameComponent } from './reviews/reviews-detail-videogame/reviews-detail-videogame/reviews-detail-videogame.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,8 @@ import { MatTooltipModule} from '@angular/material/tooltip';
     ReviewsHomeListComponent,
     CatalogCardComponent,
     SearchPipe,
-    ReviewsDetailCarouselComponent
+    ReviewsDetailCarouselComponent,
+    ReviewsDetailVideogameComponent
   ],
   imports: [
     BrowserModule,
