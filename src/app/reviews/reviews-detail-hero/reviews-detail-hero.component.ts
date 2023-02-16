@@ -22,4 +22,6 @@ export class ReviewsDetailHeroComponent {
         this.reviewsService.getSingleReview(id).subscribe()
       });
     }
+
+
 }

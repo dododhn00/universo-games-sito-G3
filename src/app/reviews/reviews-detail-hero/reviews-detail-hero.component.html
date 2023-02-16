@@ -13,9 +13,9 @@
           {{ review.score }}
         </p> -->
         <div class="star">
-  <star-rating [value]="review.score/2" checkedcolor="yellow" uncheckedcolor="gray" size="24px"></star-rating>
- 
-</div>
+          <ngx-stars [color]="'orange'" [readonly]="true"  [initialStars]="review.score/2"></ngx-stars>
+
+        </div>
         <p class="author">
           di {{ review.reviewerName }}
         </p>
