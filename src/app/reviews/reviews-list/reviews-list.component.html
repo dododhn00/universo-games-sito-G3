@@ -36,11 +36,11 @@
       </div>
 
       <div class="text-card">
-        <h2>Titolo: {{ review.title }}</h2>
+        <h2>{{ review.title }}</h2>
           <p>Autore: {{ review.reviewerName }}</p>
           <p>Pubblicazione: {{ review.publicationDate | date:'dd-MM-yyyy'}}</p>
         <div class="content">
-          <p>Contenuto: {{ review.content }}</p>
+          <p>{{ review.content }}</p>
         </div>
         </div>
 
