@@ -8,13 +8,13 @@
       [routerLink]="['reviews-detail', reviews._id]"
     >
     <!-- <ng-container> -->
-      
+
       <div class="img-container">
         <img [src]="reviews.imageUrls[0]" />
       </div>
       <div  class="centered">
-        <p> {{ reviews.title }}</p> 
-        <p class="score">{{reviews.score}}/10</p>
+        <p> {{ reviews.title }}</p>
+        <ngx-stars [color]="'#EFCF50'" [readonly]="true"  [initialStars]="reviews.score/2"></ngx-stars>
       </div>
       <!-- </ng-container> -->
   </div>
