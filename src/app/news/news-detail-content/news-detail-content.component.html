@@ -1,11 +1,11 @@
 <div
   class="container"
-  *ngIf="news$ | async as news" 
+  *ngIf="news"
 >
- 
+
     <div class="infos-container">
 
-      <p class="date">{{ news.publicationDate | date:'dd-MM-yyyy'}}</p>
+      <p class="date">{{ news.publicationDate | date:'dd-MM-yyyy'}} - <span class="reading-time">Tempo di lettura: {{ readingTimeCalculated }}</span></p>
       <hr class="separator">
 
       <p class="title">{{ news.content }}</p>
@@ -13,13 +13,13 @@
       <div *ngFor="let t of tags" class="tags-container">
 
         <p class="tags">{{ t }}</p>
-        
+
       </div>
-      
+
       <hr class="separator2">
-      
+
       <div class="">
-      
+
         <p class="author"> di {{ news.authorName }}  </p>
       </div>
     </div>

@@ -34,7 +34,7 @@ export class ReviewsDetailContentComponent {
       const words = this.text.split(" ").length;
       const minutes = Math.ceil(words / 3);
       if(minutes < 60) {
-        return minutes + " secondi";
+        return "Meno di un minuto.";
       } else {
         const time = Math.ceil((minutes / 60));
         if(time == 1) {
