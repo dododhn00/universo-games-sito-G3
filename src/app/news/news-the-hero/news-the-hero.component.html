@@ -24,7 +24,7 @@
           <div class="date"
           [class.date1]="i == 0"
           >
-              {{ news.publicationDate }}
+              {{ news.publicationDate | date:'dd-MM-yyyy'}}
         </div>
       </div>
     </div>
